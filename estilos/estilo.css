@@ -1,0 +1,769 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Roboto Condensed', sans-serif;
+}
+body{
+    background-color: rgb(139, 137, 137);
+    display: grid;
+    min-height: 100vh;
+    grid-template-rows: auto 1fr auto;
+}
+header{
+    background-image: url(../fotos/peaky1.jpg);
+    background-size: cover;
+    display: flex; 
+    flex-direction: column;
+    border-bottom: 2.5px solid black;
+    box-shadow: 0.5px 7px 25px rgb(36, 36, 53);
+}
+a{
+    color: rgb(111, 105, 67);
+    text-decoration: none;
+}
+li{
+    list-style: none;
+    cursor: pointer;
+    padding: 20px;
+    transition: all 0.3s ease 0s;
+}
+section{
+    max-width: 1300px;
+    width: 90%;
+    margin-left: auto;
+    margin-right: auto;
+}
+.icon{
+    display: none;
+}  
+.subHeader{
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    align-items: center;
+    font-family: 'Tapestry', cursive;
+}
+.logo{
+    margin-left: 50px;
+    margin-top: 15px;
+    width: 190px;
+    height: 170px;
+}
+.logo:hover{
+    width: 205px;
+    height: 179px;
+    transition: .5s;
+}
+.navegacion{
+    width: 100%;
+    margin: 25px auto;
+    display: inline-flex;
+    flex-direction: row;
+    height: 50px;
+    justify-content: space-around;     /*centrar eje x*/
+    align-items: center;               /*centrar eje y*/
+}
+.titulo{
+    margin-left: 5px;
+    width: 28.5%;
+    margin-top: 20px;
+}
+.menu > li{
+    position: relative;
+    display: inline-block;
+}
+.menu > li > a{
+    display: block;
+    color: black;
+}
+.menu li a:hover{
+    color: rgb(191,151,93,164);
+    transition: all 0.4s;
+}
+
+.submenu{
+    font-size: 16px;
+    position: absolute;
+    background-color: rgb(214, 214, 214);
+    width: 110%;
+    visibility: hidden;
+    opacity: 0;
+    transition: opacity .2s;
+    text-align: left;
+}
+.submenu li a{
+    color: black;
+}
+.menu li:hover .submenu{
+    visibility: visible;
+    opacity: 1;
+}
+.navegacion ul li a{
+    color: rgba(0, 0, 0, 0.745); 
+}
+.texto_nav{
+    font-size: 20.55px;
+}
+.section_foto_y_texto{
+    width: 90%;
+    margin: 0 auto;
+    display: flex;           
+    margin-top: 100px;
+}
+.foto_principal{
+    width: 1200px;
+    height: 500px;
+    object-fit: contain;        /*completa foto*/
+    box-shadow: 0.5px 2.5px 39px black;
+    border:3px solid rgb(0, 0, 0); 
+    padding: 12px 11px 12px 11px;
+}
+.texto_section{
+    margin: 10px;
+}
+.p_texto{
+    font-size: 19px;
+    margin-top: 20px;
+}
+footer{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 65px;
+    color: black;
+    background-color:  rgb(102, 101, 101);
+    width: 100%;
+    height: auto;
+}
+.caja_siganos{
+    font-size: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-left: 70px;
+}
+.caja_redes img{
+    margin-top: 5%;
+    width: 30px;
+    height: 30px;
+}
+.logo_footer img{ 
+    width: 180px;
+    height: 160px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin-right: 30px;
+}
+.caja_copy{
+    margin-top: 30px;
+    font-size: 17px;
+    color: rgb(0, 0, 0);
+}
+
+/*********SINOPSIS*********/
+.caja_sinopsis{
+    border-bottom: 1.9px solid black;
+    width: 80%;
+    margin: 0% auto;
+}
+.sinopsis{
+    margin-top: 60px;
+    font-size: 33px;
+}
+.sinopsis_texto{
+    font-size: 19px;
+    margin-left: 28px;
+    width: 80%;
+    margin: 0% auto;
+    margin-bottom: 15px;
+}
+.caja_resumen{
+    border-bottom: 1.9px solid black;
+    margin-left: 86px;
+    width: 80%;
+    margin: 0% auto;
+}
+.resumen{
+    margin-top: 20px;
+    font-size: 30px;
+    margin-bottom: 5px;
+}
+.texto_resumen{
+    font-size: 19px;
+    width: 89%;
+    margin: 0% auto;
+    margin-bottom: 20px;
+}
+.caja_primera_imagen{
+    display: flex;
+    flex-direction: row-reverse;
+    width: 89%;
+    margin: 0 auto;
+    margin-bottom: 25px;
+    align-items: center;
+}
+.caja_primera_imagen p{
+    margin-right: 10px;
+}
+.img1{
+    width: 400px;
+    height: 205px;
+    box-shadow: 0.5px 2px 17px black;
+}
+.img1:hover{
+    width: 420px;
+    height: 225px;
+    transition: .5s;
+}
+.img2:hover{
+    width: 420px;
+    height: 225px;
+    transition: .5s;
+}
+.img3:hover{
+    width: 420px;
+    height: 225px;
+    transition: .5s;
+}
+.caja_segunda_imagen{
+    display: flex;
+    flex-direction: row;
+    width: 89%;
+    margin: 0 auto;
+    margin-bottom: 25px;
+    align-items: center;
+}
+.caja_segunda_imagen p{
+    margin-left: 15px;
+}
+.img2{
+    width: 400px;
+    height: 205px;
+    box-shadow: 0.5px 1.5px 15px black;
+}
+.texto_resumen1{
+    font-size: 19px;
+    width: 80%;
+    margin-left: 20px;
+}
+.caja_tercera_imagen{
+    display: flex;
+    flex-direction: row;
+    width: 89%;
+    margin: 0 auto;
+    margin-bottom: 25px;
+    align-items: center;
+}
+.caja_tercera_imagen p{
+    margin-left: 15px;
+}
+.img3{
+    width: 400px;
+    height: 205px;
+    box-shadow: 0.5px 1.5px 15px black;
+}
+
+/**********PERSONAJES************/
+.personaje{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.nom_personaje{
+    display: flex;
+    width: auto;
+    margin: 0 auto;
+    margin-left: 100px;
+    overflow: hidden;
+}
+.caja_personaje{
+    background-color: rgb(9, 9, 8);
+    color: rgb(191,150,92,164);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-left: 220px;
+    box-shadow: 0.5px 3px 22px rgb(191,150,92,164);
+}
+.imagen_personaje{
+    width: 350px;
+    height: 400px;
+    object-fit: contain;  
+}
+.caja_datosextras{
+    font-size: 17.5px;
+    margin-top: 20px;
+    margin-left: 25px;
+}
+.caja_personaje div p{
+    margin-bottom: 12px;
+}
+.datos_extras_p{
+    margin-left: 90px;
+}
+.caja_nom{
+    margin-top: 9px;
+    margin-bottom: 9px;
+    font-family: 'Tapestry', cursive;
+}
+.descrip_foto{
+    margin: 0 auto;
+    display: flex;              
+    margin-top: 100px;
+} 
+.sobre_personaje{
+    width: 130%;
+    font-size: 23px;
+}
+.texto_personaje{
+    margin: 20px;
+    width: 90%;
+    font-size: 23px;
+}
+.sub_personaje{
+    margin: 20px;
+    margin-top: 15px;
+    border-bottom: 2px solid black;
+}
+
+/***********DATOS DE INTERES***********/
+
+.caja_conjunto_actores{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    width: 95%;
+    margin: 5% auto;
+}
+.elenco_h2{
+    margin-top: 50px;
+    margin-left: 43%;
+}
+.cajas_actores{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 30%;
+    margin: 20px auto;
+}
+.caja_conjunto_actores h2{
+    margin-top: 200px;
+    font-size: 22px;
+}
+.actores{
+    font-size: 15px;
+    margin-top: 10px;
+}
+.imagen_actores{
+    width: 147px;
+    height: 160px;
+    box-shadow: 0.5px 2.5px 39px black;
+}
+
+.caja_soundtrack{
+    margin-top: 20px;
+    text-align: center;
+}
+.caja_canciones{
+    margin-top: 5%;
+    display: flex;
+}
+.canciones{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    width: 70%;
+}
+.canciones h3{
+    font-size: 1rem;
+    margin-left: 2.5px;
+    text-transform: uppercase;
+}
+.boton{
+    margin-bottom: 4px;
+}
+a.boton_canciones {
+    display: flex;
+    width: 20px;
+    height: 20px;
+}
+
+/*********CRITICAS*********/
+
+.h1_criticas{
+    margin: 50px 0 10px 39%;
+}
+.criticasOpiniones {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 1.5rem;
+    padding-top: 3%;
+    padding-bottom: 3%;
+    margin-left: 3%;
+    margin-right: 3%;
+}
+
+.criticasOpiniones section {
+    width: 340px;
+    text-align: justify;
+    padding: 1rem;
+    background-color: rgb(97, 97, 97);
+    box-shadow: 15px 15px 15px -5px rgba(0, 0, 0, 0.5);
+    border: 1px solid rgba(190,150,93,164);
+}
+.criticasOpiniones section a {
+    color: rgba(190,150,93,164);
+}
+
+/**************GALERIA**************/
+
+.imagenes_caja{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin: 10%;
+}
+.imagenes_caja a img:hover{
+    filter: brightness(0.5);
+    transition: all .6s;
+}
+.imagenes_caja a img{
+    margin: 20px;
+    width: 280px;
+    height: 200px;
+    box-shadow: 0.4px 1.5px 10px rgba(190,150,93,164);
+}
+
+/**************CONTACTO**************/
+
+#formulario{
+    margin: 25px 0px 0px 26%;
+    width: 50%;
+    height: 104%;
+    border-radius: 25px;
+    display: flex;
+    box-shadow: 0.5px 2.5px 39px black;
+    border:3px solid rgba(190,150,93,164); 
+    background-color:  rgb(102, 101, 101);
+}
+.columnas_de_contacto{
+    width: 50%;
+    margin-left: 27.5%;
+}
+.columnas_de_contacto h2{
+    font-size: 3rem;
+    margin: 10%;
+    text-shadow: 2px  3px 5px rgba(85, 85, 85, 0.568);
+}
+.nombre_apellido{
+    display: flex;
+}
+
+label{
+    display: block;
+    margin: 0.5em 0;
+}
+
+.nombreyapellido{
+    width: 100%;
+}
+
+input{
+   border-radius: 15px;
+   height: 3em;
+   border: 1px solid rgba(190,150,93,164);
+}
+textarea{
+    width: 90%; 
+    border-radius: 15px;
+    height: 7em;
+    border: 1px solid rgba(190,150,93,164);
+}
+.nombreyapellido input{
+    width: 80%;
+}
+
+.bloque_datos input, textarea{
+    width: 90%;
+}
+
+.bloque_datos textarea{
+    width: 90%;
+    padding: 0.5em 0;
+    resize: none;
+
+}
+
+.submit input{
+    width: 5em;
+    margin: 0.5em 0;
+    background-color:rgba(190,150,93,164);
+}
+
+.submit input:hover{
+    font-weight: bold;
+    transition: 0.4s;
+    box-shadow: 0px  3px 5px rgba(85, 85, 85, 0.568);
+}
+
+@media screen and (max-width:480px){
+
+    /*****-------HOME-----*****/
+    nav ul { display: none; }
+    .icon { 
+        color: rgba(190,150,93,164);
+        text-align: center;
+        margin-bottom: 2%;
+        display: block; 
+    }
+    header{
+        max-width: 480px;
+    }
+    .logo{
+        margin-top: 30px;
+        width: 120px;
+        height: 120px;
+    }
+    .titulo{
+        width: 45%;
+        margin-top: 5%;
+    }
+    .submenu{
+        font-size: 16px;
+        position: absolute;
+        background-color: rgb(214, 214, 214);
+        max-width: 480px;
+        width: 98%;
+    }
+    section{
+        max-width: 480px;
+        width: 100%;
+    }
+    .section_foto_y_texto{  
+        width: 100%;    
+        margin-top: 50px;
+        display: block;
+    }
+    .foto_principal{
+        width: 100%;
+        height: auto;
+        object-fit: contain;       
+        padding: 0 0 0 0;
+    }
+    .texto_section{
+        margin-top: 25px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    .p_texto{
+        font-size: 19px;
+        margin-top: 20px;
+    }
+    footer{
+        flex-direction: column;
+        margin-top: 70px;
+    }
+    .caja_siganos{
+        margin-top: 10px;
+        width: 100%;
+        font-size: 16px;
+        margin-left: 0;
+    }
+    .caja_redes img{
+        width: 25.5px;
+        height: 25.5px;
+    }
+    .logo_footer img{ 
+       display: none;
+    }
+    .caja_copy{
+        width: 100%;
+        font-size: 13px;
+        text-align: center;
+    }
+
+    .navegacion ul{
+        display: none;
+    }
+    nav.responsive ul{
+        display: block;
+    }
+    nav.responsive ul li{
+        display: block;
+        text-align: center;
+        padding: .5rem;
+    }
+    nav.responsive ul li .submenu a{
+        max-width: 480px;
+        display: block;
+        text-align: right;
+        padding-bottom: 1rem;
+    }
+    nav.responsive ul li .submenu{
+        top: 200px;
+    }
+    /*con esto (codigo de la linea 619 a 626) muevo para abajo el submenu(desplegable de personajes) para poder selecionar los 
+    primeros personajes desde f12 (en pc).
+    ya que como esta ahora desde la pc cuesta entrar a los primeros personajes ya que entro a la galeria o datos de interes o criticas.
+    PERO en el celular esto no pasa y si funciona bien*/
+    /*no supe solucionarlo con CSS y no encontre alguna forma de hacerlo con JS*/
+
+    /*nav.responsive ul li .submenu{
+        top: 200px;
+    }
+    nav.responsive ul li .submenu a{
+        display: block;
+        text-align: right;
+        padding-bottom: 1rem;
+    }*/
+
+    /*****-------SINOPSIS-----*****/
+
+    .texto_resumen{
+        font-size: 19px;
+        width: 81%;
+        margin: 0% auto;
+        margin-top: 25px;
+    }
+    .img1{
+        margin-top: 50px;
+        width: 400px;
+        height: 200px;
+    }
+    .caja_primera_imagen{
+        flex-direction: column;
+        width: 100%;
+    }
+    .caja_primera_imagen p{
+        margin-right: 45px;
+    }
+    .caja_segunda_imagen{
+        flex-direction: column;
+        width: 100%;
+    }
+    .caja_segunda_imagen p{
+        margin-right: 15px;
+    }
+    .img2{
+        margin-top: 50px;
+        width: 400px;
+        height: 205px;
+    }
+    .caja_tercera_imagen{
+        flex-direction: column;
+        width: 100%;
+    }
+    .caja_tercera_imagen p{
+        margin-right: 15px;
+    }
+    .img3{
+        margin-top: 50px;
+        width: 400px;
+        height: 205px;
+    }
+
+    /********PERSONAJES********/
+
+    .sobre_personaje{
+        margin-top: 50px;
+        width: 100%;
+        font-size: 23px;
+    }
+    .descrip_foto{
+        display: flex;
+        flex-direction: column-reverse;
+        margin-top: 50px;
+    }
+    .caja_personaje{
+        background-color: rgb(9, 9, 8);
+        color: rgb(191,150,92,164);
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin-left: 20px;
+        margin-right: 20px;
+        box-shadow: 0.5px 3px 22px rgb(191,150,92,164);
+    }
+    .datos_extras_p{
+        margin-left: 96px;
+    }
+    /*********GALERIA*********/
+    .imagenes_caja{
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        flex-wrap: wrap;
+        margin: 10%;
+    }
+    .imagenes_caja a img:hover{
+        filter: brightness(0.5);
+        transition: all .6s;
+    }
+    .imagenes_caja a img{
+        margin: 20px;
+        width: 280px;
+        height: 200px;
+        box-shadow: 0.4px 1.5px 10px rgba(190,150,93,164);
+    }
+
+    /*********DATOS DE INTERES*********/
+
+    .elenco_h2{
+        margin-left: 29%;
+    }
+    .cajas_actores{
+        margin: 13px auto;
+    }
+    .canciones h3{
+        font-size: 12px;
+        margin-left: 2.5px;
+    }
+    .caja_canciones{
+        margin: 25px;
+    }
+    .boton{
+        margin-bottom: 0;
+    }
+    a.boton_canciones {
+        display: flex;
+        width: 30px;
+        height: 22px;
+    }
+
+    /*******CRITICAS Y OPINIONES*********/
+    .h1_criticas{
+        margin: 30px 0 10px 17%;
+    }
+    .criticasOpiniones section {
+        margin-bottom: 13px;
+    }
+
+    /*********CONTACTO*********/
+
+    #formulario{
+        margin: 25px 0px 25px 25px;
+        width: 90%;
+        height: 104%;
+        border-radius: 25px;
+        display: flex;
+        box-shadow: 0.5px 2.5px 39px black;
+        border:3px solid rgb(0, 0, 0); 
+        background-color:  rgb(102, 101, 101);
+    }
+    .columnas_de_contacto h2{
+        font-size: 1.5rem;
+        text-shadow: 2px  3px 5px rgba(85, 85, 85, 0.568);
+    }
+    .nombre_apellido{
+        flex-direction: column;
+    }
+}
+
